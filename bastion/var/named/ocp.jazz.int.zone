@@ -1,0 +1,37 @@
+$TTL 1W
+@       IN      SOA     ns1.ocp.jazz.int.       root (
+                        2019070700      ; serial
+                        3H              ; refresh (3 hours)
+                        30M             ; retry (30 minutes)
+                        2W              ; expiry (2 weeks)
+                        1W )            ; minimum (1 week)
+        IN      NS      ns1.jazz.int.
+        IN      MX 10   smtp.jazz.int.
+;
+;
+ns1     IN      A       10.200.40.190
+smtp    IN      A       10.200.40.190
+;
+helper  IN      A       10.200.40.190
+helper.ocp      IN      A       10.200.40.190
+;
+; The api identifies the IP of your load balancer.
+api.ocp         IN      A       10.200.40.190
+api-int.ocp             IN      A       10.200.40.190
+;
+; The wildcard also identifies the load balancer.
+*.apps.ocp              IN      A       10.200.40.190
+;
+; Create an entry for the bootstrap host.
+bootstrap.ocp   IN      A       10.200.40.191
+;
+; Create entries for the master hosts.
+master0.ocp             IN      A       10.200.40.192
+master1.ocp             IN      A       10.200.40.193
+master2.ocp             IN      A       10.200.40.194
+;
+; Create entries for the worker hosts.
+worker2.ocp             IN      A       10.200.40.196
+worker1.ocp             IN      A       10.200.40.195
+;
+;EOF

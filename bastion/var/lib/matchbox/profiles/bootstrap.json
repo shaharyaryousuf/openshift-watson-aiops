@@ -1,0 +1,40 @@
+{
+"id": "bootstrap",
+
+"name": "OCP 4 – Bootstrap",
+
+"ignition_id": "bootstrap.ign",
+
+"boot": {
+
+"kernel": "/assets/rhcos-installer-kernel-x86_64",
+
+"initrd": [
+
+"/assets/rhcos-installer-initramfs.x86_64.img"
+
+],
+
+"args": [
+
+"ip=dhcp",
+
+"rd.neednet=1",
+
+"console=tty0",
+
+"console=ttyS0",
+
+"coreos.inst=yes",
+
+"coreos.inst.install_dev=sda",
+
+"coreos.inst.image_url=http://bastion.ocp.jazz.int:8080/assets/rhcos-4.6.1-x86_64-metal.x86_64.raw.gz",
+
+"coreos.inst.ignition_url=http://bastion.ocp.jazz.int:8080/ignition?mac=${mac:hexhyp}"
+
+]
+
+}
+
+}

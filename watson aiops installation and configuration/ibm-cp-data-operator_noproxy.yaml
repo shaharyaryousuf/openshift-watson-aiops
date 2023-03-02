@@ -1,0 +1,399 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "2"
+  creationTimestamp: "2021-02-25T01:20:28Z"
+  generation: 2
+  labels:
+    app.kubernetes.io/instance: ibm-cp-data-operator
+    app.kubernetes.io/managed-by: ibm-cp-data-operator
+    app.kubernetes.io/name: ibm-cp-data-operator
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+      f:spec:
+        f:progressDeadlineSeconds: {}
+        f:replicas: {}
+        f:revisionHistoryLimit: {}
+        f:selector:
+          f:matchLabels:
+            .: {}
+            f:name: {}
+        f:strategy:
+          f:rollingUpdate:
+            .: {}
+            f:maxSurge: {}
+            f:maxUnavailable: {}
+          f:type: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              .: {}
+              f:cloudpakId: {}
+              f:cloudpakName: {}
+              f:cloudpakVersion: {}
+              f:productID: {}
+              f:productMetric: {}
+              f:productName: {}
+              f:productVersion: {}
+            f:labels:
+              .: {}
+              f:app.kubernetes.io/instance: {}
+              f:app.kubernetes.io/managed-by: {}
+              f:app.kubernetes.io/name: {}
+              f:name: {}
+          f:spec:
+            f:affinity:
+              .: {}
+              f:nodeAffinity:
+                .: {}
+                f:preferredDuringSchedulingIgnoredDuringExecution: {}
+                f:requiredDuringSchedulingIgnoredDuringExecution:
+                  .: {}
+                  f:nodeSelectorTerms: {}
+            f:containers:
+              k:{"name":"cpd-meta-operator"}:
+                .: {}
+                f:command: {}
+                f:env:
+                  .: {}
+                  k:{"name":"ENTITLED_REGISTRY_NAME"}:
+                    .: {}
+                    f:name: {}
+                  k:{"name":"META_NAMESPACE"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:fieldRef:
+                        .: {}
+                        f:apiVersion: {}
+                        f:fieldPath: {}
+                  k:{"name":"OPERATOR_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"POD_NAME"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:fieldRef:
+                        .: {}
+                        f:apiVersion: {}
+                        f:fieldPath: {}
+                  k:{"name":"REGISTRY_SECRET"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"WATCH_NAMESPACE"}:
+                    .: {}
+                    f:name: {}
+                  k:{"name":"WEBHOOK_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":9443,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:name: {}
+                    f:protocol: {}
+                f:resources:
+                  .: {}
+                  f:limits:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:securityContext:
+                  .: {}
+                  f:allowPrivilegeEscalation: {}
+                  f:capabilities:
+                    .: {}
+                    f:drop: {}
+                  f:privileged: {}
+                  f:readOnlyRootFilesystem: {}
+                  f:runAsNonRoot: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  .: {}
+                  k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+            f:dnsPolicy: {}
+            f:initContainers:
+              .: {}
+              k:{"name":"setup-resources"}:
+                .: {}
+                f:command: {}
+                f:env:
+                  .: {}
+                  k:{"name":"IMAGE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"NAMESPACE"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:fieldRef:
+                        .: {}
+                        f:apiVersion: {}
+                        f:fieldPath: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:resources:
+                  .: {}
+                  f:limits:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                  f:requests:
+                    .: {}
+                    f:cpu: {}
+                    f:memory: {}
+                f:securityContext:
+                  .: {}
+                  f:allowPrivilegeEscalation: {}
+                  f:capabilities:
+                    .: {}
+                    f:drop: {}
+                  f:privileged: {}
+                  f:readOnlyRootFilesystem: {}
+                  f:runAsNonRoot: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:serviceAccount: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:volumes:
+              .: {}
+              k:{"name":"cert"}:
+                .: {}
+                f:name: {}
+                f:secret:
+                  .: {}
+                  f:defaultMode: {}
+                  f:optional: {}
+                  f:secretName: {}
+    manager: aimanager-operator
+    operation: Update
+    time: "2021-02-25T01:20:28Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:template:
+          f:spec:
+            f:containers:
+              k:{"name":"cpd-meta-operator"}:
+                f:env:
+                  k:{"name":"ENTITLED_REGISTRY_NAME"}:
+                    f:value: {}
+    manager: Mozilla
+    operation: Update
+    time: "2021-02-25T01:23:07Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:replicas: {}
+        f:unavailableReplicas: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2021-02-25T01:26:57Z"
+  name: ibm-cp-data-operator
+  namespace: aiops
+  resourceVersion: "14549471"
+  selfLink: /apis/apps/v1/namespaces/aiops/deployments/ibm-cp-data-operator
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      name: ibm-cp-data-operator
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        cloudpakId: eb9998dcc5d24e3eb5b6fb488f750fe2
+        cloudpakName: Cloud Pak for Data
+        cloudpakVersion: 3.5.0
+        productID: eb9998dcc5d24e3eb5b6fb488f750fe2
+        productMetric: VIRTUAL_PROCESSOR_CORE
+        productName: IBM Cloud Pak for Data
+        productVersion: 3.5.0
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: ibm-cp-data-operator
+        app.kubernetes.io/managed-by: ibm-cp-data-operator
+        app.kubernetes.io/name: ibm-cp-data-operator
+        name: ibm-cp-data-operator
+    spec:
+      affinity:
+        nodeAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - preference:
+              matchExpressions:
+              - key: beta.kubernetes.io/arch
+                operator: In
+                values:
+                - amd64
+            weight: 3
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: beta.kubernetes.io/arch
+                operator: In
+                values:
+                - amd64
+      containers:
+      - command:
+        - ibm-cp-data-operator
+        env:
+        - name: META_NAMESPACE
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+        - name: WATCH_NAMESPACE
+        - name: WEBHOOK_ENABLED
+          value: "false"
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        - name: OPERATOR_NAME
+          value: ibm-cp-data-operator
+        - name: REGISTRY_SECRET
+          value: cp.icr.io
+        - name: ENTITLED_REGISTRY_NAME
+          value: cp.icr.io/cp/ibm-watson-ai-manager
+        image: docker.io/ibmcom/ibm-cp-data-operator@sha256:2cd96701903920a02a0ef5d60c676e59419b4a92a809a563a322723e511bacd1
+        imagePullPolicy: Always
+        name: cpd-meta-operator
+        ports:
+        - containerPort: 9443
+          name: webhook-server
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 500m
+            memory: 1Gi
+          requests:
+            cpu: 100m
+            memory: 256Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+          privileged: false
+          readOnlyRootFilesystem: false
+          runAsNonRoot: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /tmp/k8s-webhook-server/serving-certs
+          name: cert
+          readOnly: true
+      dnsPolicy: ClusterFirst
+      initContainers:
+      - command:
+        - /bin/bash
+        - -c
+        - /setup/create-resources.sh
+        env:
+        - name: NAMESPACE
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+        - name: IMAGE
+          value: docker.io/ibmcom/ibm-cp-data-operator@sha256:2cd96701903920a02a0ef5d60c676e59419b4a92a809a563a322723e511bacd1
+        image: docker.io/ibmcom/ibm-cp-data-operator@sha256:2cd96701903920a02a0ef5d60c676e59419b4a92a809a563a322723e511bacd1
+        imagePullPolicy: Always
+        name: setup-resources
+        resources:
+          limits:
+            cpu: 500m
+            memory: 1Gi
+          requests:
+            cpu: 100m
+            memory: 256Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+          privileged: false
+          readOnlyRootFilesystem: false
+          runAsNonRoot: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: ibm-cp-data-operator-serviceaccount
+      serviceAccountName: ibm-cp-data-operator-serviceaccount
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: cert
+        secret:
+          defaultMode: 420
+          optional: true
+          secretName: cpd-webhook-server-cert

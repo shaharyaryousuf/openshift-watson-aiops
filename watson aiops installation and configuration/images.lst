@@ -1,0 +1,13 @@
+cp4d-tiller:v2.16.6.2-x86_64
+cpd-operator-init:v1.0.1-x86_64
+cpdoperator:v3.5.1-128-x86_64
+zen-watchdog:3.5.1-x86_64-352
+icp4data-nginx-repo:3.5.1-x86_64-352
+zen-metastoredb:3.5.1-x86_64-352
+privatecloud-usermgmt:3.5.1-x86_64-352
+influxdb:3.5.1-x86_64-352
+icpd-requisite:3.5.1-x86_64-352
+zen-core:3.5.1-x86_64-352
+zen-core-api:3.5.1-x86_64-352
+zen-data-sorcerer:3.5.1-x86_64-352
+zen-audit:3.5.1-x86_64-352

@@ -1,0 +1,24 @@
+$TTL 1W
+@       IN      SOA     ns1.jazz.int.   root (
+                        2019070700      ; serial
+                        3H              ; refresh (3 hours)
+                        30M             ; retry (30 minutes)
+                        2W              ; expiry (2 weeks)
+                        1W )            ; minimum (1 week)
+        IN      NS      ns1.jazz.int.
+;
+; The syntax is "last octet" and the host must have an FQDN
+; with a trailing dot.
+192     IN      PTR     master0.ocp.jazz.int.
+193     IN      PTR     master1.ocp.jazz.int.
+194     IN      PTR     master2.ocp.jazz.int.
+;
+191     IN      PTR     bootstrap.ocp.jazz.int.
+;
+190     IN      PTR     api.ocp.jazz.int.
+190     IN      PTR     api-int.ocp.jazz.int.
+;
+196     IN      PTR     worker2.ocp.jazz.int.
+195     IN      PTR     worker1.ocp.jazz.int.
+;
+;EOF
